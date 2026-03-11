@@ -1,13 +1,13 @@
 
 let Container = document.querySelector('#Container');
 
-function defaultSquares() {
-for (let i = 0; i < 16; i++) {
+function defaultSquares(number = 16) {
+for (let i = 0; i < number; i++) {
     let row = document.createElement('div');
     row.classList.add('row');
     Container.appendChild(row);
 
-        for(let b = 0; b < 16; b++) {
+        for(let b = 0; b < number; b++) {
         let square = document.createElement('div');
         square.classList.add('square');
         square.addEventListener('mouseover', function() {
@@ -26,14 +26,14 @@ function userInput() {
     Container.innerHTML = "";
     let number = prompt("Choose the number of boxes", "50");
     if (number > 100) {
-    alert("message here");
+    alert("Choose a number less than 100");
     return;
 }
-    
+   defaultSquares(number);
 }
 const inputBtn = document.querySelector("#inputBtn");
 inputBtn.addEventListener('click', function() {
-    
+    userInput();
 })
 
 
