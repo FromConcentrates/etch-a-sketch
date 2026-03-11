@@ -9,6 +9,10 @@
     
 }
 
+.squareHover {
+    background-color: blue;
+}
+
  #Container {
     display: flex;
     flex-wrap: wrap;
