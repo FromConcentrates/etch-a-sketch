@@ -13,6 +13,8 @@ for (let i = 0; i < number; i++) {
         square.addEventListener('mouseover', function() {
           square.classList.add('squareHover')  
         })
+         square.style.width = `${980/number}px`;
+        square.style.height = `${980/number}px`;
         row.appendChild(square);
         
     }
@@ -44,7 +46,8 @@ That input is used in a temperate literal formula
 the formula dynamically calculate box sizes via pixels
 box pixels are applied to width value in CSS
 
- result = `square.width: 980/${number}px`;
+ square.style.width = `${980/number}px`;
+ square.style.height = `{980/number}px`;
  */ 
 
 /* clear the Container, re-initiate the for-loops using the 
